@@ -15,11 +15,14 @@ ChainRanges (const T& first, const V& second): t1(first), v1(second) {
 
  }
 
+template<typename Y>
 struct iterator{
 
- 
+    iterator(Y stam): var(stam) {this->var=stam; }
 
-auto operator* (){
+ Y var;
+
+Y operator* (){
     return var;
 }
 
